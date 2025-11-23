@@ -1,4 +1,5 @@
 "use client"
+import React from "react"
 import type { Game } from "@/types/game"
 import GameCard from "./GameCard"
 import { useGameStore } from "@/store/gameStore"

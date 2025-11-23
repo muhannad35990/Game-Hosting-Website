@@ -1,4 +1,5 @@
 "use client"
+import React from "react"
 import { CATEGORIES } from "@/data/categories"
 import { cn } from "@/lib/utils"
 import { useGameStore } from "@/store/gameStore"

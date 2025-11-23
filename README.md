@@ -6,6 +6,8 @@ First, run the development server:
 npm i
 npm run dev
 
+For Runing Unit Test
+npm test
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
