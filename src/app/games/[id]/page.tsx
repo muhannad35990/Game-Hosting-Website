@@ -1,3 +1,4 @@
+import React from "react"
 import { games } from "@/data/games"
 import { notFound } from "next/navigation"
 import GamePlayer from "@/components/GamePlayer"
@@ -5,7 +6,7 @@ import Link from "next/link"
 import GameListRow from "@/components/GameListRow"
 import { ReviewsSection } from "@/components/ReviewsSection"
 import { DetailsPageProps } from "@/types/page"
-import ShareButton from "@/components/ShareButton"
+import ShareToSocialMedia from "@/components/ShareButton"
 
 export default async function page({ params }: DetailsPageProps) {
   const { id } = await params
@@ -26,7 +27,10 @@ export default async function page({ params }: DetailsPageProps) {
           </nav>
           <div className="flex items-center justify-between mb-2">
             <h1 className="text-2xl font-semibold mt-2">{game.title}</h1>
-            <ShareButton title={game.title} description={game.description} />
+            <ShareToSocialMedia
+              title={game.title}
+              description={game.description}
+            />
           </div>
 
           <p className="text-gray-600 dark:text-gray-300">{game.description}</p>
