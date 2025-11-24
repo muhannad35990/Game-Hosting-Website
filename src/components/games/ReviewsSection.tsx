@@ -1,8 +1,7 @@
 "use client"
-
 import { Review } from "@/types/review"
 import { getAverageRating } from "@/lib/utils"
-import { RatingStars } from "./RatingStars"
+import { RatingStars } from "../common/RatingStars"
 import { AddReview } from "./AddReview"
 
 export function ReviewsSection({
@@ -27,11 +26,11 @@ export function ReviewsSection({
         {reviews.map((r) => (
           <div
             key={r.id}
-            className="border rounded-lg p-4 shadow-sm bg-white flex flex-col gap-1"
+            className="border rounded-lg p-4 shadow-sm bg-white dark:bg-gray-700 dark:text-gray-200 flex flex-col gap-1"
           >
             <RatingStars rating={r.rating} />
-            <p className="text-gray-700">{r.comment}</p>
-            <span className="text-xs text-gray-400">
+            <p className="text-gray-700 dark:text-gray-200">{r.comment}</p>
+            <span className="text-xs text-gray-400 dark:text-gray-200">
               {new Date(r.createdAt).toLocaleDateString()}
             </span>
           </div>

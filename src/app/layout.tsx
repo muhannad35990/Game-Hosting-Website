@@ -1,8 +1,9 @@
-import { ThemeProvider } from "@/components/ThemeProvider"
+import react from "react"
+import { ThemeProvider } from "@/components/common/ThemeProvider"
 import "./globals.css"
-import Header from "@/components/Header"
-import Footer from "@/components/Footer"
+import Footer from "@/components/layout/Footer"
 import { Roboto } from "next/font/google"
+import Header from "@/components/layout/Header"
 
 export const metadata = {
   title: "GameHost",
@@ -25,7 +26,7 @@ export default function RootLayout({
       <body className="min-h-screen bg-gray-100 dark:bg-gray-900 dark:text-gray-100 text-gray-900">
         <ThemeProvider>
           <Header />
-          <main className="container mx-auto p-4">{children}</main>
+          <main className="container1 mx-auto p-4">{children}</main>
 
           <Footer />
         </ThemeProvider>

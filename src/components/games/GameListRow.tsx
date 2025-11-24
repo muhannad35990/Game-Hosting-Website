@@ -1,3 +1,4 @@
+import react from "react"
 import Link from "next/link"
 import type { Game } from "@/types/game"
 import Image from "next/image"

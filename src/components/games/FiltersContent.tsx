@@ -1,14 +1,12 @@
 "use client"
-import React from "react"
 import { CATEGORIES } from "@/data/categories"
 import { cn } from "@/lib/utils"
 import { useGameStore } from "@/store/gameStore"
 import { ChartLine, History, Star } from "lucide-react"
-import { usePathname, useRouter, useSearchParams } from "next/navigation"
+import { useRouter, useSearchParams } from "next/navigation"
 
-export default function Filters() {
+function FiltersContent() {
   const searchParams = useSearchParams()
-  const pathname = usePathname()
   const router = useRouter()
   const { selectedCategories, toggleCategory, clearCategories } = useGameStore(
     (state) => state
@@ -23,10 +21,8 @@ export default function Filters() {
     router.push(`?${params.toString()}`, { scroll: false })
   }
   return (
-    <aside
-      className="
-        w-64 border-e h-full flex flex-col gap-4"
-    >
+    <div>
+      {" "}
       {/* Quick Actions */}
       <div className="flex flex-col gap-3 mt-2 text-sm">
         <button
@@ -53,9 +49,7 @@ export default function Filters() {
           <ChartLine color="blue" size={18} /> Top Rated
         </button>
       </div>
-
       <div className="border-t border-gary-200 mt-2 pt-3" />
-
       {/* Category checkboxes */}
       <div className="flex flex-col gap-1">
         {CATEGORIES.map((cat) => {
@@ -85,7 +79,6 @@ export default function Filters() {
           )
         })}
       </div>
-
       {/* Clear button */}
       <button
         onClick={clearCategories}
@@ -94,6 +87,8 @@ export default function Filters() {
       >
         Clear filters
       </button>
-    </aside>
+    </div>
   )
 }
+
+export default FiltersContent

@@ -1,5 +1,5 @@
 "use client"
-
+import react from 'react'
 import { Share2, XIcon } from "lucide-react"
 import { useEffect, useState } from "react"
 import {

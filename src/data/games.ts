@@ -108,7 +108,7 @@ export const games: Game[] = [
   },
 
   {
-    id: "worm:-apple-quest",
+    id: "apple-quest",
     title: "Worm: Apple Quest",
     description:
       "Guide your worm to the legendary Golden Apple while navigating obstacles.",

@@ -1,3 +1,4 @@
+import react from "react"
 function Footer() {
   return (
     <footer className="mt-12 border-t bg-white dark:bg-gray-900">

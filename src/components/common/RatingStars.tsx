@@ -1,5 +1,5 @@
 "use client"
-
+import react from "react"
 import { Star } from "lucide-react"
 
 export function RatingStars({ rating }: { rating: number }) {

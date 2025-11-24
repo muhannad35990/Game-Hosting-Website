@@ -1,5 +1,5 @@
 "use client"
-
+import react from 'react'
 import { usePathname, useRouter, useSearchParams } from "next/navigation"
 import {
   Pagination,

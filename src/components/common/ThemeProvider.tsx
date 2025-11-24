@@ -1,6 +1,6 @@
 "use client"
 import { createContext, useContext, useEffect, useState } from "react"
-
+import react from "react"
 type Theme = "light" | "dark"
 
 const ThemeContext = createContext<{

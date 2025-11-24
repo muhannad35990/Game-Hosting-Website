@@ -2,6 +2,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { FeaturedProps } from "@/types/game"
+import react from "react"
 
 export default function Featured({ items }: FeaturedProps) {
   if (!items || items.length === 0) return null

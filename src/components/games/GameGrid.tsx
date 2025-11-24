@@ -1,11 +1,10 @@
 "use client"
-import React from "react"
 import type { Game } from "@/types/game"
 import GameCard from "./GameCard"
 import { useGameStore } from "@/store/gameStore"
-import { CustomPagination } from "./CustomPagination"
+import { CustomPagination } from "../common/CustomPagination"
 import { useSearchParams } from "next/navigation"
-import { useEffect, useState } from "react"
+import react, { useEffect, useState } from "react"
 
 export default function GameGrid({ games }: { games: Game[] }) {
   const pageSize = 9
@@ -66,7 +65,7 @@ export default function GameGrid({ games }: { games: Game[] }) {
 
   return (
     <div className="flex flex-col items-center">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full justify-items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 w-full justify-items-center">
         {paginated.map((g) => (
           <GameCard key={g.id} game={g} />
         ))}

@@ -1,6 +1,5 @@
-import React from "react"
 import { render, screen, fireEvent } from "@testing-library/react"
-import Filters from "@/components/Filters"
+import Filters from "@/components/games/Filters"
 
 // Mock navigation hooks
 const mockPush = jest.fn()

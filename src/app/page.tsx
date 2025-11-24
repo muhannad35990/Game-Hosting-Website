@@ -1,9 +1,9 @@
-import React from "react"
+import react from "react"
 import { games as initialGames } from "@/data/games"
-import GameGrid from "@/components/GameGrid"
-import Filters from "@/components/Filters"
-import SearchBar from "@/components/SearchBar"
-import Featured from "@/components/Featured"
+import GameGrid from "@/components/games/GameGrid"
+import Filters from "@/components/games/Filters"
+import SearchBar from "@/components/games/SearchBar"
+import Featured from "@/components/games/Featured"
 
 export default function HomePage() {
   return (

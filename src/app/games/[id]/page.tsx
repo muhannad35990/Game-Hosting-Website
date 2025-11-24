@@ -1,12 +1,12 @@
-import React from "react"
+import react from "react"
 import { games } from "@/data/games"
 import { notFound } from "next/navigation"
-import GamePlayer from "@/components/GamePlayer"
+import GamePlayer from "@/components/games/GamePlayer"
 import Link from "next/link"
-import GameListRow from "@/components/GameListRow"
-import { ReviewsSection } from "@/components/ReviewsSection"
+import GameListRow from "@/components/games/GameListRow"
+import { ReviewsSection } from "@/components/games/ReviewsSection"
 import { DetailsPageProps } from "@/types/page"
-import ShareToSocialMedia from "@/components/ShareButton"
+import ShareToSocialMedia from "@/components/common/ShareButton"
 
 export default async function page({ params }: DetailsPageProps) {
   const { id } = await params
@@ -20,7 +20,7 @@ export default async function page({ params }: DetailsPageProps) {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-12 w-full gap-4">
-      <div className="col-span-8">
+      <div className="col-span-12 lg:col-span-8">
         <div className="mb-4">
           <nav className="text-sm text-gray-600 dark:text-gray-100">
             <Link href="/">Home</Link> &nbsp;/&nbsp; <span>{game.title}</span>
@@ -45,7 +45,7 @@ export default async function page({ params }: DetailsPageProps) {
       </div>
 
       {related.length > 0 && (
-        <section className="mt-8 col-span-4">
+        <section className="mt-8 col-span-12 lg:col-span-4">
           <h2 className="text-lg font-semibold mb-3">Related games</h2>
           <div className="grid grid-cols-1 gap-4">
             {related.map((r) => (

@@ -14,7 +14,7 @@ export default function GameCard({ game }: { game: Game }) {
 
   return (
     <div
-      className="relative bg-white dark:bg-gray-800 rounded-3xl shadow-lg hover:shadow-3xl transition flex flex-col w-[350px] cursor-pointer ease-in-out hover:-translate-y-1"
+      className="relative bg-white dark:bg-gray-800 rounded-3xl shadow-lg hover:shadow-3xl transition flex flex-col w-[300px] cursor-pointer ease-in-out hover:-translate-y-1"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
@@ -23,7 +23,7 @@ export default function GameCard({ game }: { game: Game }) {
           <Image
             src={game.thumbnail}
             alt={game.title}
-            width={350}
+            width={300}
             height={200}
             className="object-cover w-full h-[200px]"
           />

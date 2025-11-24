@@ -125,3 +125,14 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+.container1 {
+  width: 100%;
+  max-width: 96rem;
+}
+
+@media (width <= 80rem) {
+  .container1 {
+    max-width: 98% !important;
+  }
+}

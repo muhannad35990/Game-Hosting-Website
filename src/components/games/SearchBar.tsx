@@ -1,5 +1,5 @@
 "use client"
-import { useEffect, useState } from "react"
+import react, { useEffect, useState } from "react"
 import { useGameStore } from "@/store/gameStore"
 
 export default function SearchBar() {
@@ -19,7 +19,7 @@ export default function SearchBar() {
         value={value}
         onChange={(e) => setValue(e.target.value)}
         placeholder="Search games by title..."
-        className="x-3 p-2 border rounded-lg outline-none w-[700px] bg-white"
+        className="x-3 p-2 border rounded-lg outline-none w-[700px] bg-white dark:bg-gray-700"
       />
     </div>
   )

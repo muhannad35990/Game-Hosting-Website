@@ -1,5 +1,5 @@
 "use client"
-
+import react from "react"
 import { Star } from "lucide-react"
 import { useState } from "react"
 
@@ -10,7 +10,7 @@ export function AddReview({ gameId }: { gameId: string }) {
   async function submitReview() {}
 
   return (
-    <div className="mt-8 border p-4 rounded-lg bg-gray-50">
+    <div className="mt-8 border p-4 rounded-lg bg-gray-50 dark:bg-gray-700 dark:text-gray-200">
       <h3 className="font-medium mb-3">Write a Review</h3>
 
       <div className="flex gap-2 mb-2">
